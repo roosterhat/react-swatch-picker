@@ -4,7 +4,6 @@ import Paper from 'material-ui/Paper';
 import SwatchPickerIcon from './SwatchPickerIcon';
 import './SwatchPicker.css';
 
-
 class SwatchPicker extends Component {
     constructor(props) {
         super(props);
@@ -21,24 +20,24 @@ class SwatchPicker extends Component {
     }
 
     componentDidMount() {
-        document.addEventListener('mousedown', this.handleClickOutside);
+        document.addEventListener('click', this.handleClickOutside);
     }
 
     componentWillUnmount() {
-        document.removeEventListener('mousedown', this.handleClickOutside);
+        document.removeEventListener('click', this.handleClickOutside);
     }
 
     /**
-     * Set the wrapper ref
+     * Set the component wrapper ref
      */
-    setWrapperRef(node) {
+    setWrapperRef = node => {
         this.wrapperRef = node;
     }
 
     /**
-     * Alert if clicked on outside of element
+     *  If click is outside the component we hide the color picker
      */
-    handleClickOutside(event) {
+    handleClickOutside = event => {
         if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
             this.setState({
                 showPicker: false
@@ -65,15 +64,11 @@ class SwatchPicker extends Component {
                 <IconButton onClick={this.togglePicker}>
                     <SwatchPickerIcon color={this.state.selectedColor} width={240} height={240} />
                 </IconButton>
-                <Paper class={!this.state.showPicker ? 'swatch-picker closed': 'swatch-picker' } elevation={4}>
+                <Paper className={!this.state.showPicker ? 'swatch-picker closed': 'swatch-picker' } elevation={4}>
                 {
-                    this.state.colorList.map(function(color){
-                        var style = {
-                            backgroundColor: color
-                        }
-                
-                        return <div className="swatch-color" style={style} onClick={() => {this.pickColor(color)}} >&nbsp;</div>;
-                    }, this)
+                    this.state.colorList.map(color => 
+                        <div className="swatch-color" key={color} style={{backgroundColor: color}} onClick={() => {this.pickColor(color)}} ></div>
+                    , this)
                 }
                 </Paper>
             </div>

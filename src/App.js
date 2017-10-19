@@ -3,8 +3,6 @@ import SwatchPicker from './swatch-picker-component/SwatchPicker';
 import logo from './logo.svg';
 import './App.css';
 
-//colorList={['#000','#f00','#0f0','#00f','#ff0','#0ff','#f0f','#fff']}
-
 class App extends Component {
   constructor(props) {
     super(props);
