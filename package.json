@@ -1,5 +1,5 @@
 {
-  "name": "swatch-picker",
+  "name": "react-swatch-picker",
   "version": "0.1.0",
   "private": true,
   "description": "Put a description here",
@@ -30,6 +30,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.5.1",
+    "css-loader": "^0.28.7",
     "material-ui": "^1.0.0-beta.17",
     "material-ui-icons": "^1.0.0-beta.17"
   }

@@ -10,7 +10,9 @@ class SwatchPicker extends Component {
 
         this.setWrapperRef = this.setWrapperRef.bind(this);  
         this.handleClickOutside = this.handleClickOutside.bind(this);
-
+        this.togglePicker = this.togglePicker.bind(this);
+        this.pickColor = this.pickColor.bind(this);
+        
         this.state = {
             showPicker: false,
             selectedColor: props.color || '#000000',
@@ -30,14 +32,14 @@ class SwatchPicker extends Component {
     /**
      * Set the component wrapper ref
      */
-    setWrapperRef = node => {
+    setWrapperRef(node) {
         this.wrapperRef = node;
     }
 
     /**
      *  If click is outside the component we hide the color picker
      */
-    handleClickOutside = event => {
+    handleClickOutside(event) {
         if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
             this.setState({
                 showPicker: false
@@ -45,13 +47,13 @@ class SwatchPicker extends Component {
         }
     }
 
-    togglePicker = e => {
+    togglePicker(e) {
         this.setState({
             showPicker: !this.state.showPicker
         })
       }
     
-    pickColor = color => {
+    pickColor(color) {
         this.setState({
             selectedColor: color,
             showPicker: this.state.closeOnPick ? false : true

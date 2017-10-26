@@ -1,4 +1,5 @@
 var path = require('path');
+
 module.exports = {
   entry: './src/SwatchPicker.js',
   output: {
@@ -18,6 +19,10 @@ module.exports = {
             presets: ['env']
           }
         }
+      },
+      {
+        test: /\.css$/,
+        use: [ 'css-loader' ]
       }
     ]
   },
