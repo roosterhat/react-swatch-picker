@@ -1,6 +1,6 @@
 {
   "name": "react-swatch-picker",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "private": true,
   "description": "Put a description here",
   "main": "build/index.js",
@@ -10,27 +10,27 @@
   },
   "peerDependencies": {
     "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "material-ui": "^1.0.0-beta.17",
     "material-ui-icons": "^1.0.0-beta.17"
   },
   "dependencies": {
     "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "webpack": "^2.6.1"
+    "react-dom": "^16.0.0"
   },
   "scripts": {
     "start": "webpack --watch",
-    "build": "webpack",
+    "build": "./node_modules/.bin/babel src/SwatchPicker.js > build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.5.1",
-    "css-loader": "^0.28.7",
+    "babel-preset-react": "^6.24.1",
     "material-ui": "^1.0.0-beta.17",
     "material-ui-icons": "^1.0.0-beta.17",
     "uglifyjs-webpack-plugin": "^1.0.0-rc.0"
