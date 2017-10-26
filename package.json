@@ -32,6 +32,7 @@
     "babel-preset-env": "^1.5.1",
     "css-loader": "^0.28.7",
     "material-ui": "^1.0.0-beta.17",
-    "material-ui-icons": "^1.0.0-beta.17"
+    "material-ui-icons": "^1.0.0-beta.17",
+    "uglifyjs-webpack-plugin": "^1.0.0-rc.0"
   }
 }
