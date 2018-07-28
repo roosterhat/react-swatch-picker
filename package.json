@@ -1,6 +1,6 @@
 {
   "name": "react-swatch-picker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "private": false,
   "description": "React clone of Polymer swatch picker",
