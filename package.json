@@ -1,8 +1,9 @@
 {
   "name": "react-swatch-picker",
-  "version": "0.9.0",
-  "private": true,
-  "description": "Put a description here",
+  "version": "1.0.2",
+  "license": "MIT",
+  "private": false,
+  "description": "React clone of Polymer swatch picker",
   "main": "build/index.js",
   "author": {
     "name": "Alessandro Garzaro",
@@ -42,7 +43,5 @@
     "material-ui-icons": "1.0.0-beta.36",
     "uglifyjs-webpack-plugin": "1.2.7"
   },
-  "publishConfig": {
-    "registry": "http://http://nexus.northernlights.io:8081/repository/npm-hosted/"
-  }
+  "publishConfig": {}
 }

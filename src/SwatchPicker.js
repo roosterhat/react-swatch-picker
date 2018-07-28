@@ -51,9 +51,11 @@ class SwatchPicker extends Component {
         this.setState({
             showPicker: !this.state.showPicker
         })
-      }
+    }
     
     pickColor(color) {
+        this.props.onColorSelect(color);
+
         this.setState({
             selectedColor: color,
             showPicker: this.state.closeOnPick ? false : true
